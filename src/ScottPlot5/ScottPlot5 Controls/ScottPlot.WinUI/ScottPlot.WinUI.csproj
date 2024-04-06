@@ -1,7 +1,7 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.23">
     <!-- ref ; https://github.com/unoplatform/uno/discussions/10977 -->
     <PropertyGroup>
-        <TargetFrameworks>net6.0-windows10.0.18362;net6.0</TargetFrameworks>
+        <TargetFrameworks>net6.0-windows10.0.19041;net6.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <ImplicitUsings>disable</ImplicitUsings>
         <LangVersion>11</LangVersion>
@@ -47,14 +47,14 @@
     </ItemGroup>
 
     <!-- Package dependencies -->
-    <ItemGroup Condition="'$(TargetFramework)'=='net6.0-windows10.0.18362'">
+    <ItemGroup Condition="'$(TargetFramework)'=='net6.0-windows10.0.19041'">
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.*" />
         <PackageReference Include="SkiaSharp.Views.WinUI" Version="2.*" />
         <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" RuntimeFrameworkVersion="10.0.19041.33" />
         <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" TargetingPackVersion="10.0.19041.33" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.18362'">
+    <ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.19041'">
         <PackageReference Include="Uno.WinUI" Version="4.*" />
         <PackageReference Include="SkiaSharp.Views.Uno.WinUI" Version="2.*" />
     </ItemGroup>
@@ -67,7 +67,7 @@
         <ProjectReference Include="..\..\ScottPlot5\ScottPlot.csproj" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.18362'">
+    <ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.19041'">
         <Content Include="Assets\**" />
         <Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
         <Compile Update="**\*.xaml.cs">
