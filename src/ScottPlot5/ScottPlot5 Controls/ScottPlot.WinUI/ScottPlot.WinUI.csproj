@@ -50,8 +50,6 @@
     <ItemGroup Condition="'$(TargetFramework)'=='net6.0-windows10.0.19041'">
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.*" />
         <PackageReference Include="SkiaSharp.Views.WinUI" Version="2.*" />
-        <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" RuntimeFrameworkVersion="10.0.19041.33" />
-        <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" TargetingPackVersion="10.0.19041.33" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)'!='net6.0-windows10.0.19041'">
